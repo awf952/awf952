@@ -1,136 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Register</title>
-
-    <style>
-        h1 {
-            margin-left: 15%;
-            color: rgb(8, 96, 122);
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            height: 30vh;
-        }
-
-        form {
-            margin-right: 850px;
-            background-color: #f2f2f2;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        table {
-            width: 100%;
-        }
-
-        td {
-            padding: 10px;
-        }
-
-        input[type="text"],
-        input[type="date"],
-        textarea,
-        select {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        input[type="radio"],
-        input[type="checkbox"] {
-            margin-right: 5px;
-        }
-
-        input[type="submit"],
-        input[type="button"] {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover,
-        input[type="button"]:hover {
-            background-color: #45a049;
-        }
-    </style>
-
+<title>Belajar HTML Table</title>
 </head>
-
 <body>
-    <h1>Free Registration</h1>
-    <div class="container">
-        <form action="" method="post">
-            <table>
-                <tr>
-                    <td>Nama:</td>
-                    <td><input type="text"></td>
-                </tr>
-
-                <tr>
-                    <td>Tanggal Lahir:</td>
-                    <td><input type="date" name="tanggal"></td>
-                </tr>
-
-                <tr>
-                    <td>Alamat:</td>
-                    <td><textarea name="biografi"></textarea></td>
-                </tr>
-
-                <tr>
-                    <td>Kota:</td>
-                    <td><input type="text"></td>
-                </tr>
-
-                <tr>
-                    <td>Pekerjaan:</td>
-                    <td>
-                        <select>
-                            <option>Tani</option>
-                            <option>Guru</option>
-                            <option>PNS</option>
-                            <option>Karyawan</option>
-                        </select>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Jenis Kelamin:</td>
-                    <td>
-                        <input type="radio" name="jk"> Laki-laki
-                        <input type="radio" name="jk"> Perempuan
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Hobby:</td>
-                    <td>
-                        <input type="checkbox"> Reading<br>
-                        <input type="checkbox"> Sport<br>
-                        <input type="checkbox"> Singing<br>
-                        <input type="checkbox"> Traveling
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan="2" style="text-align: center;">
-                        <input type="submit" value="Kirim">
-                        <input type="button" value="Batal">
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </div>
+<div align="center">
+<table border="2" width="450">
+<tr>
+<td colspan="3" bgcolor="#FF9900">Agus Wahid Fatoni </td>
+</tr>
+<tr>
+<td rowspan="2">Kolom 1A<br>+Kolom 1B (rowspan)</td>
+<td>Kolom 2A</td>
+<td rowspan="2">Kolom 3A<br>+Kolom 3B (rowspan)</td>
+</tr>
+<tr>
+<td width=100 height=137>
+<img title="myprofile" src="foto-profile.jpg" width=200 height=300 alt="myprofile">
+</td>
+</tr>
+<tr>
+<td>Kolom 1C</td><td>Kolom 2C</td><td>Kolom 3C</td>
+</tr>
+</table>
+</div>
 </body>
+</html>
+<p>
 
+</p>
+<html>
+<head>
+<title>Penggunaan Tabel Dalam HTML</title>
+</head>
+<body>
+<table cellspacing="2" cellpadding="2" border="1" width="70%" >
+<caption>BIODATA SISWA</caption>
+<tr>
+<th width="15%"><font color="black" face="Arial" size="4">Nama</font></th>
+<th width="16%">Alamat</th>
+<th width="39%" colspan="3" align="center">Telepon</th>
+</tr>
+<tr>
+<td width="15%">Agus</td>
+<td width="16%">&nbsp;Bogor</td>
+<td width="13%" align="center">081 - 315602803</td>
+<td width="13%" align="center">081315602803</td>
+<td width="13%" align="center">081 - 315602803</td>
+</tr>
+<tr>
+<td width="15%">Wahid</td>
+<td width="16%">&nbsp;Tangerang</td>
+<td width="13%" align="center">081 - 315602803</td>
+<td width="13%" align="center">081315602803</td>
+<td width="13%" align="center">081 - 315602803</td>
+</tr>
+</table>
+<p>&nbsp;</p>
+<table border="1" width="70%" >
+<caption>BIODATA SISWA</caption>
+<tr>
+<th width="15%">Nama</th>
+<th width="16%">Nim</th>
+<th width="39%" align="center">Telepon</th>
+</tr>
+<tr>
+<td width="15%" rowspan="3" valign="top">Fatoni</td>
+<td width="16%" rowspan="3" valign="top">&nbsp;211011401019</td>
+<td width="39%" align="center">081 - 315602803</td>
+</tr>
+<tr>
+<td width="39%" align="center">08131445689</td>
+</tr>
+<tr>
+<td width="39%" align="center">081 - 315602803</td>
+</tr>
+<tr>
+<td width="15%" rowspan="3">Agus Wahid Fatoni</td>
+<td width="16%" rowspan="3">&nbsp;211011401019</td>
+<td width="39%" align="center">021 - 76456982</td>
+</tr>
+<tr>
+<td width="39%" align="center">08183457298</td>
+</tr>
+<tr>
+<td width="39%" align="center">021 - 66543881</td>
+</tr>
+</table>
+</body>
 </html>
