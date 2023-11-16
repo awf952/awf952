@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kalkulator Luas Trapesium</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #333333;
+    }
+    
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333333;
+    }
+    
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+    }
+    
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    p {
+      margin-top: 16px;
+      font-weight: bold;
+      color: #333333;
+    }
+  </style>
+  <script>
+    function hitungLuas() {
+      var garisAtas = parseFloat(document.getElementById("GarisAtas").value);
+      var garisBawah = parseFloat(document.getElementById("GarisBawah").value);
+      var tinggi = parseFloat(document.getElementById("Tinggi").value);
+      
+      var luas = ((garisAtas + garisBawah) * tinggi) / 2;
+      
+      document.getElementById("hasilLuas").textContent = "Luas Trapesium: " + luas;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Kalkulator Luas Trapesium</h1>
+    <label for="GarisAtas">Garis Atas:</label>
+    <input type="number" id="GarisAtas">
+  
+    <label for="GarisBawah">Garis Bawah:</label>
+    <input type="number" id="GarisBawah">
+  
+    <label for="Tinggi">Tinggi:</label>
+    <input type="number" id="Tinggi">
+  
+    <button onclick="hitungLuas()">Hitung Luas</button>
+  
+    <p id="hasilLuas"></p>
+  </div>
+</body>
+</html>
