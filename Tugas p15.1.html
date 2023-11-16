@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Program JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .form-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-container input[type="text"] {
+            padding: 10px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function showAlert() {
+            alert("Ini adalah pesan alert!");
+        }
+
+        function showPrompt() {
+            var name = prompt("Masukkan nama kamu:");
+            if (name != null && name != "") {
+                alert("Halo, " + name + "!");
+            } else {
+                alert("Nama tidak valid!");
+            }
+        }
+
+        function showConfirm() {
+            var result = confirm("Apakah kamu yakin ingin melanjutkan?");
+            if (result == true) {
+                alert("Kamu memilih untuk melanjutkan!");
+            } else {
+                alert("Kamu memilih untuk membatalkan!");
+            }
+        }
+
+        function submitForm() {
+            var input = document.getElementById("inputText").value;
+            alert("Kamu mengirimkan: " + input);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Program JavaScript</h1>
+
+        <button class="button" onclick="showAlert()">Alert</button>
+        <button class="button" onclick="showPrompt()">Prompt</button>
+        <button class="button" onclick="showConfirm()">Confirm</button>
+
+        <form class="form-container" onsubmit="event.preventDefault(); submitForm();">
+            <input type="text" id="inputText" placeholder="Masukkan teks">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

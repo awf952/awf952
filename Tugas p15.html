@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh Dialog Box Notifikasi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Contoh Dialog Box Notifikasi Perangkat</h1>
+    <button class="button" onclick="myFunction()">Colek dong!</button>
+
+    <h2>Dialog Masukan</h2>
+    <button class="button" onclick="tampilkanNama()">Tampilkan Nama</button>
+
+    <h2>Dialog Peringatan</h2>
+    <button class="button" onclick="peringatan()">Pesan Sekarang</button>
+
+    <h2>Dialog Konfirmasi</h2>
+    <button class="button" onclick="konfirmasiHapus()">Hapus</button>
+  </div>
+
+  <script>
+    function myFunction() {
+      alert("Contoh dialog box notifikasi perangkat!");
+    }
+
+    function tampilkanNama() {
+      var nama = prompt("Masukkan nama Anda:");
+      if (nama != null && nama != "") {
+        alert("Halo, " + nama + "!");
+      } else {
+        alert("Anda belum memasukkan nama.");
+      }
+    }
+
+    function peringatan() {
+      alert("Pemesanan Anda berhasil!");
+    }
+
+    function konfirmasiHapus() {
+      var konfirmasi = confirm("Apakah Anda yakin ingin menghapus data ini?");
+      if (konfirmasi) {
+        // Kode untuk menghapus data
+        alert("Data berhasil dihapus!");
+      } else {
+        // Kode jika pengguna membatalkan tindakan
+        alert("Penghapusan data dibatalkan.");
+      }
+    }
+  </script>
+</body>
+</html>
