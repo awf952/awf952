@@ -1,11 +1,32 @@
-// Contoh kode JavaScript
+function hitung() {
+  // Mendapatkan nilai dari input
+  var angka1 = parseFloat(document.getElementById('angka1').value);
+  var angka2 = parseFloat(document.getElementById('angka2').value);
 
-// Variabel
-let nama = 'Wahid';
-let usia = 22;
-let isMenikah = true;
+  // Mendapatkan operator yang dipilih
+  var operator = document.getElementById('operator').value;
 
-// Menampilkan output
-console.log('Nama:', nama);
-console.log('Usia:', usia);
-console.log('Status Menikah:', isMenikah);
+  // Melakukan perhitungan
+  var hasil;
+
+  switch (operator) {
+    case '+':
+      hasil = angka1 + angka2;
+      break;
+    case '-':
+      hasil = angka1 - angka2;
+      break;
+    case '*':
+      hasil = angka1 * angka2;
+      break;
+    case '/':
+      hasil = angka1 / angka2;
+      break;
+    default:
+      hasil = 'Operasi tidak valid';
+      break;
+  }
+
+  // Menampilkan hasil
+  document.getElementById('hasil').textContent = hasil;
+}
