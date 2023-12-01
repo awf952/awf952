@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Example</title>
+</head>
+<body>
+  <p id="message"></p>
+
+  <script type="text/javascript">
+    var d = new Date();
+    var time = d.getHours();
+    if (time < 10) {
+      document.getElementById("message").innerHTML = "Good morning!";
+    } else {
+      document.getElementById("message").innerHTML = "Good day!";
+    }
+  </script>
+</body>
+</html>

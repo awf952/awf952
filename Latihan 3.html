@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Example</title>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+  var myName = prompt("Please enter your name", "budi");
+  var nb = prompt("Please enter the product name", "");
+  var hs = prompt("Please enter the unit price", "");
+  var jb = prompt("Please enter the quantity", "");
+  var hb = hs * jb;
+  var disc;
+
+  if (hb > 500000) {
+    disc = (5 / 100 * hb);
+  } else if (hb > 300000) {
+    disc = (2 / 100 * hb);
+  } else {
+    disc = (0.5 / 100 * hb);
+  }
+
+  var hbb = hb - disc;
+
+  document.write("<font size=5 color='blue'><img src='keranjang.jpg' width='75' height='60'> Penjualan Harga Barang</font><br>");
+  document.write("<font size=4 color='sienna'><pre>");
+  document.write("-<br>");
+  document.write("Nama barang: ", nb, "<br>");
+  document.write("Harga satuan: ", hs, "<br>");
+  document.write("Jumlah Barang: ", jb, "<br>");
+  document.write("Harga Barang = ", hb, "<br>");
+  document.write("Harga Discount: ", disc, "<br>");
+  document.write("Harga Barang Bersih = ", hbb, "<br>");
+  document.write("-<br>");
+  document.write("</font></pre>");
+  document.write("<font size=3 color='red'><blink>");
+  document.write("Created by ", myName);
+  document.write("</blink></font>");
+</script>
+</body>
+</html>
